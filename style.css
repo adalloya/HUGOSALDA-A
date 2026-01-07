@@ -79,10 +79,11 @@ a:hover {
 }
 
 section {
-    padding: 140px 0;
-    /* consistent padding */
-    margin-bottom: 0;
-    /* remove margin to rely solely on padding for standard gaps */
+    padding: 100px 0;
+    margin-top: 200px;
+    /* Force physical separation from previous element */
+    margin-bottom: 200px;
+    /* Force physical separation from next element */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,10 +117,13 @@ nav {
     box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-color);
+/* Logo Styles */
+.nav-logo {
+    height: 45px;
+    /* Adjust size to fit navbar height */
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
 }
 
 .nav-links {
@@ -327,14 +331,15 @@ nav {
 
     /* Fix section padding */
     section {
-        padding: 100px 0;
-        /* Standardized mobile spacing */
+        padding: 80px 0;
+        margin-top: 100px;
+        margin-bottom: 100px;
         min-height: auto;
     }
 
     #hero {
-        margin-bottom: 100px !important;
-        /* Match mobile padding */
+        margin-bottom: 0 !important;
+        /* Managed by section margin-top now */
     }
 
     .container {

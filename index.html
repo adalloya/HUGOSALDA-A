@@ -19,7 +19,9 @@
 
 <body>
   <nav>
-    <div class="logo">HS.</div>
+    <a href="#" class="logo-link">
+      <img src="/assets/logo-full.png" alt="Hugo Saldaña Logo" class="nav-logo">
+    </a>
     <div class="burger">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -161,9 +163,13 @@
   </div>
 
   <footer>
-    <p style="text-align: center; color: var(--text-secondary); padding: 20px; font-size: 0.8rem;">
-      Designed & Built by <a href="#">Hugo Saldaña</a> | &copy; 2026
-    </p>
+    <div class="footer-content"
+      style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 40px 20px;">
+      <img src="/assets/logo-full.png" alt="Hugo Saldaña Logo" class="footer-logo" style="width: 120px; opacity: 0.8;">
+      <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+        &copy; 2026 Hugo Saldaña. All rights reserved.
+      </p>
+    </div>
   </footer>
 
   <script type="module" src="/main.js"></script>
