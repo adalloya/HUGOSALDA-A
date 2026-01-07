@@ -79,8 +79,11 @@ a:hover {
 }
 
 section {
-    padding: 100px 0;
-    min-height: 100vh;
+    padding: 200px 0;
+    /* Aggressive spacing as requested */
+    margin-bottom: 50px;
+    /* Extra separation */
+    /* min-height: 100vh; Removed to avoid excessive gaps on short sections */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +106,8 @@ nav {
     top: 0;
     width: 100%;
     height: 70px;
-    background: rgba(10, 25, 47, 0.85);
+    background: rgba(10, 25, 47, 0.95);
+    /* Increased opacity for better contrast */
     backdrop-filter: blur(10px);
     z-index: 1000;
     display: flex;
@@ -132,6 +136,16 @@ nav {
 }
 
 /* Hero Section */
+#hero {
+    padding-top: 150px;
+    /* Standardize with sections */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically center hero content */
+}
+
 #hero h1 {
     color: var(--text-primary);
 }
@@ -314,7 +328,8 @@ nav {
 
     /* Fix section padding */
     section {
-        padding: 60px 0;
+        padding: 120px 0;
+        /* Increased spacing for mobile */
         min-height: auto;
         /* Allow flexible height on mobile */
     }
@@ -322,4 +337,223 @@ nav {
     .container {
         padding: 0 25px;
     }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 25, 47, 0.9);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(--accent-color);
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    /* Ensure logical height for maps */
+    display: flex;
+    flex-direction: column;
+}
+
+.close-modal {
+    color: var(--accent-color);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--gold);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#modal-body img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+#modal-body iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Burger Menu Styles */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Updated Mobile Styles */
+@media (max-width: 768px) {
+
+    /* Navbar Adjustment */
+    nav {
+        padding: 0 25px;
+        justify-content: space-between;
+        /* Space out logo and burger */
+        height: 70px;
+        /* Fixed height again */
+        align-items: center;
+        flex-direction: row;
+        /* Force row to align logo left and burger right */
+    }
+
+    .burger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        /* Start from top covers everything */
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* Center links vertically */
+        width: 100%;
+        /* Full width overlay */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        padding-bottom: 0;
+        gap: 30px;
+        /* Larger gap for touch targets */
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        /* Larger font for mobile menu */
+    }
+
+    /* Burger Animation */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Typography Polish for Mobile */
+    h1 {
+        font-size: 3rem !important;
+        line-height: 1.1;
+    }
+
+    /* Reduced from 4.5rem to fit better */
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    #hero p {
+        font-size: 1rem !important;
+    }
+
+    #hero {
+        padding-top: 100px;
+        /* Less top padding needed now nav is compact */
+        justify-content: center;
+        /* Center hero content again if it fits, else flex-start */
+        text-align: left;
+    }
+}
+/* Hero Video Background */
+#hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important; /* Reset padding for full coverage, inner container handles it */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.85); /* Dark overlay matching brand */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Bring text above video */
+    padding-top: 150px; /* Restore top padding */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

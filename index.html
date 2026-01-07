@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hugo Saldaña | Finance Director & Data Analyst</title>
+  <title>Hugo Saldaña | CFO & Data Scientist</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,67 +12,153 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Placeholder for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <nav>
     <div class="logo">HS.</div>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">Propuesta</a></li>
+      <li><a href="#tech-lab">Tech Lab</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#education">Educación</a></li>
+      <li><a href="#contact">Contacto</a></li>
     </ul>
   </nav>
 
   <main>
-    <header id="hero" class="container">
-      <h1 class="fade-in" style="transition-delay: 100ms">Hugo Saldaña.</h1>
-      <h2 class="fade-in" style="transition-delay: 200ms">I drive financial strategy & insights.</h2>
-      <p class="fade-in" style="transition-delay: 300ms">
-        Finance Director with over 10 years of experience in Corporate Finance, FP&A, and Digital Transformation.
-        Currently optimizing financial performance at OLEOMEX.
-      </p>
-      <a href="#portfolio" class="cta-button fade-in" style="transition-delay: 400ms">Check out my work</a>
+    <header id="hero">
+      <div class="video-container">
+        <video autoplay muted loop playsinline poster="/assets/hero-poster.png">
+          <source src="/video/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="fade-in"
+          style="color: var(--accent-color); font-family: monospace; margin-bottom: 20px; font-size: 1.1rem;">Hola, soy
+          Hugo Saldaña</p>
+        <h1 class="fade-in" style="transition-delay: 100ms; font-size: 4.5rem; line-height: 1.1;">Finanzas potenciadas
+          por
+          <span style="color: var(--accent-color)">Código</span>.
+        </h1>
+        <h2 class="fade-in"
+          style="transition-delay: 200ms; color: var(--text-secondary); font-size: 2rem; margin-top: 20px;">Transformo
+          datos complejos en rentabilidad pura.</h2>
+        <p class="fade-in"
+          style="transition-delay: 300ms; max-width: 650px; margin-top: 30px; font-size: 1.15rem; color: var(--text-secondary);">
+          <strong>No soy el típico CFO.</strong> Combino +13 años de estrategia corporativa con programación avanzada
+          (Python/SQL) para automatizar decisiones y maximizar márgenes.
+          <br><br>
+          Ayudo a empresas líderes a transicionar de reportes estáticos a <strong>modelos de inteligencia financiera
+            automatizada</strong>.
+        </p>
+        <div class="fade-in" style="transition-delay: 400ms; margin-top: 40px; display: flex; gap: 20px;">
+          <a href="#tech-lab" class="cta-button">Ver Casos de Éxito</a>
+          <a href="#contact" class="cta-button"
+            style="border: 1px solid var(--text-secondary); color: var(--text-primary);">Hablemos</a>
+        </div>
+      </div>
     </header>
 
     <section id="about" class="container">
-      <h2 class="fade-in">01. About Me</h2>
+      <h2 class="fade-in">01. Propuesta de Valor</h2>
       <div class="about-content fade-in glass-panel">
-        <p id="about-text">
+        <p id="about-text" style="white-space: pre-line; margin-bottom: 1.5rem;">
           <!-- Populated by JS -->
         </p>
-        <div id="skills-cloud" class="skills-list" style="margin-top: 2rem;">
+        <div id="value-prop"
+          style="font-style: italic; border-left: 3px solid var(--accent-color); padding-left: 1rem; color: var(--text-primary);">
+          <!-- Populated by JS -->
+        </div>
+        <h3 style="margin-top: 2rem; font-size: 1.2rem; color: var(--text-primary);">Stack & Idiomas</h3>
+        <div id="skills-cloud" class="skills-list" style="margin-top: 1rem;">
           <!-- Populated by JS -->
         </div>
       </div>
     </section>
 
+    <section id="tech-lab" class="container">
+      <h2 class="fade-in">02. Tech Lab: Finanzas + Data</h2>
+      <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-secondary);">
+        Demostración de cómo aplico código y tecnología para resolver problemas financieros reales.
+      </p>
+      <div class="projects-grid" id="tech-lab-list">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
     <section id="experience" class="container">
-      <h2 class="fade-in">02. Where I've Worked</h2>
+      <h2 class="fade-in">03. Trayectoria Profesional</h2>
       <div class="timeline" id="experience-list">
         <!-- Populated by JS -->
       </div>
     </section>
 
+    <section id="education" class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+
+        <!-- Education Column -->
+        <div>
+          <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 2rem;"><i class="fas fa-graduation-cap"
+              style="color: var(--accent-color); margin-right: 15px;"></i>Educación</h2>
+          <div id="education-list" class="fade-in">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Languages Column -->
+        <div>
+          <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 2rem;"><i class="fas fa-globe-americas"
+              style="color: var(--accent-color); margin-right: 15px;"></i>Idiomas</h2>
+          <div id="languages-list" class="fade-in" style="display: flex; flex-direction: column; gap: 20px;">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section id="portfolio" class="container">
-      <h2 class="fade-in">03. Some Things I've Built</h2>
+      <h2 class="fade-in">04. Visualizaciones & Proyectos</h2>
       <div class="projects-grid" id="projects-list">
         <!-- Populated by JS -->
       </div>
     </section>
 
     <section id="contact" class="container" style="text-align: center;">
-      <h2 class="fade-in" style="justify-content: center; margin-bottom: 2rem;">04. Get In Touch</h2>
-      <p class="fade-in" style="max-width: 600px; margin: 0 auto 2rem;">
-        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my
-        best to get back to you!
+      <h2 class="fade-in" style="justify-content: center; margin-bottom: 2rem;">05. Contacto</h2>
+      <p class="fade-in" style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.2rem;">
+        <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 10px;"></i> <span
+          id="contact-email"></span><br><br>
+        <i class="fas fa-phone" style="color: var(--accent-color); margin-right: 10px;"></i> <span
+          id="contact-phone"></span><br><br>
+        <i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-right: 10px;"></i> <span
+          id="contact-location"></span>
       </p>
-      <a href="https://www.linkedin.com/in/hugo-saldana-gutierrez/" target="_blank" class="cta-button fade-in">Say Hello
-        on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/hugo-saldana-gutierrez/" target="_blank" class="cta-button fade-in">LinkedIn
+        Profile</a>
     </section>
   </main>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-body">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p style="text-align: center; color: var(--text-secondary); padding: 20px; font-size: 0.8rem;">
