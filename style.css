@@ -574,3 +574,16 @@ nav {
     flex-direction: column;
     justify-content: center;
 }
+/* Explicit Spacer Utility */
+.spacer {
+    height: 150px;
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .spacer {
+        height: 100px;
+    }
+}
