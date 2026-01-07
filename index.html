@@ -72,8 +72,6 @@
       </div>
     </header>
 
-    <div class="spacer"></div>
-
     <section id="about" class="container">
       <h2 class="fade-in">01. Propuesta de Valor</h2>
       <div class="about-content fade-in glass-panel">
@@ -91,8 +89,6 @@
       </div>
     </section>
 
-    <div class="spacer"></div>
-
     <section id="tech-lab" class="container">
       <h2 class="fade-in">02. Tech Lab: Finanzas + Data</h2>
       <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-secondary);">
@@ -103,16 +99,12 @@
       </div>
     </section>
 
-    <div class="spacer"></div>
-
     <section id="experience" class="container">
       <h2 class="fade-in">03. Trayectoria Profesional</h2>
       <div class="timeline" id="experience-list">
         <!-- Populated by JS -->
       </div>
     </section>
-
-    <div class="spacer"></div>
 
     <section id="education" class="container">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
@@ -138,8 +130,6 @@
       </div>
     </section>
 
-    <div class="spacer"></div>
-
     <section id="portfolio" class="container">
       <h2 class="fade-in">04. Visualizaciones & Proyectos</h2>
       <div class="projects-grid" id="projects-list">
@@ -147,20 +137,34 @@
       </div>
     </section>
 
-    <div class="spacer"></div>
+    <section id="contact" class="container">
+      <h2 class="fade-in">05. Contacto</h2>
+      <div class="glass-panel fade-in" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h3 style="color: var(--text-primary); margin-bottom: 20px;">¿Listo para optimizar tus finanzas?</h3>
+        <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-secondary);">
+          Actualmente estoy disponible para consultoría y nuevos proyectos.
+          Si tienes una pregunta o simplemente quieres saludar, ¡haré todo lo posible por responderte!
+        </p>
 
-    <section id="contact" class="container" style="text-align: center;">
-      <h2 class="fade-in" style="justify-content: center; margin-bottom: 2rem;">05. Contacto</h2>
-      <p class="fade-in" style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.2rem;">
-        <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 10px;"></i> <span
-          id="contact-email"></span><br><br>
-        <i class="fas fa-phone" style="color: var(--accent-color); margin-right: 10px;"></i> <span
-          id="contact-phone"></span><br><br>
-        <i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-right: 10px;"></i> <span
-          id="contact-location"></span>
-      </p>
-      <a href="https://www.linkedin.com/in/hugo-saldana-gutierrez/" target="_blank" class="cta-button fade-in">LinkedIn
-        Profile</a>
+        <div class="contact-details" style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <i class="fas fa-envelope" style="color: var(--accent-color);"></i>
+            <span id="contact-email" style="font-family: monospace;"></span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <i class="fas fa-phone" style="color: var(--accent-color);"></i>
+            <span id="contact-phone" style="font-family: monospace;"></span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i>
+            <span id="contact-location" style="font-family: monospace;"></span>
+          </div>
+        </div>
+
+        <a href="https://www.linkedin.com/in/hugo-saldana-gutierrez/" target="_blank" class="cta-button">
+          <i class="fab fa-linkedin" style="margin-right: 8px;"></i>Conectar en LinkedIn
+        </a>
+      </div>
     </section>
   </main>
 
