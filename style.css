@@ -588,3 +588,27 @@ nav {
         height: 100px;
     }
 }
+/* Explicit Spacer to Force Gaps */
+.spacer {
+    height: 150px !important;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+/* Force Contact Title Left Alignment */
+#contact {
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+#contact h2 {
+    justify-content: flex-start !important;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .spacer {
+        height: 100px !important;
+    }
+}
