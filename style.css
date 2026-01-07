@@ -516,11 +516,17 @@ nav {
         text-align: left;
     }
 }
+
 /* Hero Video Background */
 #hero {
     position: relative;
     overflow: hidden;
-    padding: 0 !important; /* Reset padding for full coverage, inner container handles it */
+    padding: 0 !important;
+    /* Reset padding for full coverage, inner container handles it */
+    min-height: 100vh;
+    /* Ensure full height */
+    margin-bottom: 150px;
+    /* Force significant space before the next section */
 }
 
 .video-container {
@@ -544,14 +550,17 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 25, 47, 0.85); /* Dark overlay matching brand */
+    background: rgba(10, 25, 47, 0.85);
+    /* Dark overlay matching brand */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Bring text above video */
-    padding-top: 150px; /* Restore top padding */
+    z-index: 2;
+    /* Bring text above video */
+    padding-top: 150px;
+    /* Restore top padding */
     height: 100%;
     display: flex;
     flex-direction: column;
