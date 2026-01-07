@@ -79,11 +79,10 @@ a:hover {
 }
 
 section {
-    padding: 200px 0;
-    /* Aggressive spacing as requested */
-    margin-bottom: 50px;
-    /* Extra separation */
-    /* min-height: 100vh; Removed to avoid excessive gaps on short sections */
+    padding: 140px 0;
+    /* consistent padding */
+    margin-bottom: 0;
+    /* remove margin to rely solely on padding for standard gaps */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -328,10 +327,14 @@ nav {
 
     /* Fix section padding */
     section {
-        padding: 120px 0;
-        /* Increased spacing for mobile */
+        padding: 100px 0;
+        /* Standardized mobile spacing */
         min-height: auto;
-        /* Allow flexible height on mobile */
+    }
+
+    #hero {
+        margin-bottom: 100px !important;
+        /* Match mobile padding */
     }
 
     .container {
@@ -525,8 +528,8 @@ nav {
     /* Reset padding for full coverage, inner container handles it */
     min-height: 100vh;
     /* Ensure full height */
-    margin-bottom: 150px;
-    /* Force significant space before the next section */
+    margin-bottom: 140px;
+    /* EQUAL GAP: Matches section padding (140px) + section top margin/padding (0/140) context */
 }
 
 .video-container {
