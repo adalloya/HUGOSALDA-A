@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expertise & Trayectoria | Hugo Saldaña</title>
+    <link rel="icon" type="image/png" href="./assets/meta-icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <a href="/index.html" class="logo-link">
+            <img src="./assets/logo-full.png" alt="Hugo Saldaña Logo" class="nav-logo">
+        </a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/about.html" class="active">Sobre Mí</a></li>
+            <li><a href="/projects.html">Proyectos</a></li>
+            <li><a href="/index.html#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="container" style="padding-top: 150px;">
+            <h1 class="fade-in" style="font-size: 3rem; margin-bottom: 1rem;">Expertise & Know-How</h1>
+            <p class="fade-in"
+                style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px;">
+                Mi trayectoria combinando estrategia financiera corporativa con ciencia de datos aplicada.
+            </p>
+
+            <!-- Tech Lab Section -->
+            <section id="tech-lab" style="margin-bottom: 4rem;">
+                <h2 class="fade-in" style="margin-bottom: 2rem;">Tech Lab: Soluciones Reales</h2>
+                <div class="projects-grid" id="tech-lab-list">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" style="margin-bottom: 4rem;">
+                <h2 class="fade-in" style="margin-bottom: 2rem;">Contexto Profesional</h2>
+                <div class="timeline" id="experience-list">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Education & Languages Section -->
+            <section id="education">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+                    <!-- Education Column -->
+                    <div>
+                        <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 2rem;"><i
+                                class="fas fa-graduation-cap"
+                                style="color: var(--accent-color); margin-right: 15px;"></i>Educación</h2>
+                        <div id="education-list" class="fade-in">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Languages Column -->
+                    <div>
+                        <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 2rem;"><i
+                                class="fas fa-globe-americas"
+                                style="color: var(--accent-color); margin-right: 15px;"></i>Idiomas</h2>
+                        <div id="languages-list" class="fade-in"
+                            style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <div class="spacer"></div>
+
+        <section id="contact" class="container">
+            <h2 class="fade-in">Hablemos</h2>
+            <div class="glass-panel fade-in" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h3 style="color: var(--text-primary); margin-bottom: 20px;">Colaboración & Networking</h3>
+                <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-secondary);">
+                    Siempre estoy abierto a discutir ideas, compartir metodologías o explorar colaboraciones académicas
+                    y profesionales.
+                </p>
+                <a href="https://www.linkedin.com/in/hugo-saldana-gutierrez/" target="_blank" class="cta-button">
+                    <i class="fab fa-linkedin" style="margin-right: 8px;"></i>Conectar en LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content"
+            style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 40px 20px;">
+            <img src="./assets/logo-full.png" alt="Hugo Saldaña Logo" class="footer-logo"
+                style="width: 120px; opacity: 0.8;">
+            <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+                &copy; 2026 Hugo Saldaña. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        // Flag for main.js to know what to render
+        window.isAboutPage = true;
+    </script>
+</body>
+
+</html>

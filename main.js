@@ -45,7 +45,13 @@ function renderContent() {
         return;
     }
 
-    // 3. HOME PAGE (Original Logic)
+    // 3. ABOUT PAGE
+    if (window.isAboutPage) {
+        renderAboutPage();
+        return;
+    }
+
+    // 4. HOME PAGE
     renderHomePage();
 }
 
@@ -93,24 +99,8 @@ function renderProjectsPage() {
     });
 }
 
-function renderHomePage() {
-    // Render About & Value Prop
-    const aboutText = document.getElementById('about-text');
-    if (aboutText) aboutText.innerText = profileData.about;
-
-    const valueProp = document.getElementById('value-prop');
-    if (valueProp && profileData.valueProp) valueProp.innerText = profileData.valueProp;
-
-    // Render Skills & Languages
-    const skillsContainer = document.getElementById('skills-cloud');
-    if (skillsContainer) {
-        [...profileData.skills, ...profileData.languages].forEach(item => {
-            const span = document.createElement('span');
-            span.className = 'skill-tag';
-            span.innerText = item;
-            skillsContainer.appendChild(span);
-        });
-    }
+function renderAboutPage() {
+    // THIS PAGE NOW HOLDS THE EXPERTISE CONTENT
 
     // Render Tech Lab
     const techLabContainer = document.getElementById('tech-lab-list');
@@ -168,15 +158,6 @@ function renderHomePage() {
         });
     }
 
-    // Render Projects (Home limits to 3 or featured, for now we render all but using new card style)
-    const projContainer = document.getElementById('projects-list');
-    if (projContainer) {
-        profileData.projects.forEach(project => {
-            const card = createProjectCard(project);
-            projContainer.appendChild(card);
-        });
-    }
-
     // Render Education
     const eduContainer = document.getElementById('education-list');
     if (eduContainer && profileData.education) {
@@ -218,6 +199,37 @@ function renderHomePage() {
         <span style="font-family: monospace; color: var(--gold); background: rgba(255, 215, 0, 0.1); padding: 4px 10px; border-radius: 4px;">${level}</span>
       `;
             langContainer.appendChild(div);
+        });
+    }
+}
+
+function renderHomePage() {
+    // Simplified Home Page - Just Projects Preview & Stats/Quick Intro if needed
+
+    // Render About & Value Prop
+    const aboutText = document.getElementById('about-text');
+    if (aboutText) aboutText.innerText = profileData.about;
+
+    const valueProp = document.getElementById('value-prop');
+    if (valueProp && profileData.valueProp) valueProp.innerText = profileData.valueProp;
+
+    // Render Skills & Languages
+    const skillsContainer = document.getElementById('skills-cloud');
+    if (skillsContainer) {
+        [...profileData.skills, ...profileData.languages].forEach(item => {
+            const span = document.createElement('span');
+            span.className = 'skill-tag';
+            span.innerText = item;
+            skillsContainer.appendChild(span);
+        });
+    }
+
+    // Render Projects (Home limits to 3 or featured, for now we render all but using new card style)
+    const projContainer = document.getElementById('projects-list');
+    if (projContainer) {
+        profileData.projects.slice(0, 3).forEach(project => {
+            const card = createProjectCard(project);
+            projContainer.appendChild(card);
         });
     }
 

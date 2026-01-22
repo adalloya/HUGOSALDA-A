@@ -27,7 +27,7 @@
 
 <body>
   <nav>
-    <a href="#" class="logo-link">
+    <a href="/index.html" class="logo-link">
       <img src="./assets/logo-full.png" alt="Hugo Saldaña Logo" class="nav-logo">
     </a>
     <div class="burger">
@@ -36,10 +36,9 @@
       <div class="line3"></div>
     </div>
     <ul class="nav-links">
-      <li><a href="#about">Propuesta</a></li>
+      <li><a href="/index.html" class="active">Inicio</a></li>
+      <li><a href="/about.html">Sobre Mí</a></li>
       <li><a href="/projects.html">Proyectos</a></li>
-      <li><a href="#tech-lab">Tech Lab</a></li>
-      <li><a href="#experience">Experiencia</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
   </nav>
@@ -71,7 +70,7 @@
         </p>
         <div class="fade-in" style="transition-delay: 400ms; margin-top: 40px; display: flex; gap: 20px;">
           <a href="/projects.html" class="cta-button">Ver Proyectos</a>
-          <a href="#about" class="cta-button"
+          <a href="/about.html" class="cta-button"
             style="border: 1px solid var(--text-secondary); color: var(--text-primary);">Sobre el Autor</a>
         </div>
       </div>
@@ -79,71 +78,12 @@
 
     <div class="spacer"></div>
 
-    <section id="about" class="container">
-      <h2 class="fade-in">01. Sobre este Blog</h2>
-      <div class="about-content fade-in glass-panel">
-        <p id="about-text" style="white-space: pre-line; margin-bottom: 1.5rem;">
-          <!-- Populated by JS -->
-        </p>
-        <div id="value-prop"
-          style="font-style: italic; border-left: 3px solid var(--accent-color); padding-left: 1rem; color: var(--text-primary);">
-          <!-- Populated by JS -->
-        </div>
-        <h3 style="margin-top: 2rem; font-size: 1.2rem; color: var(--text-primary);">Stack & Idiomas</h3>
-        <div id="skills-cloud" class="skills-list" style="margin-top: 1rem;">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-    </section>
-
-    <div class="spacer"></div>
-
-    <section id="tech-lab" class="container">
-      <h2 class="fade-in">02. Tech Lab: Finanzas + Data</h2>
-      <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-secondary);">
-        Demostración de cómo aplico código y tecnología para resolver problemas financieros reales.
-      </p>
-      <div class="projects-grid" id="tech-lab-list">
-        <!-- Populated by JS -->
-      </div>
-    </section>
-
-    <div class="spacer"></div>
-
-    <section id="experience" class="container">
-      <h2 class="fade-in">03. Contexto Profesional (Bio)</h2>
-      <div class="timeline" id="experience-list">
-        <!-- Populated by JS -->
-      </div>
-    </section>
-
-    <div class="spacer"></div>
-
-    <section id="education" class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
-
-        <!-- Education Column -->
-        <div>
-          <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 2rem;"><i class="fas fa-graduation-cap"
-              style="color: var(--accent-color); margin-right: 15px;"></i>Educación</h2>
-          <div id="education-list" class="fade-in">
-            <!-- Populated by JS -->
-          </div>
-        </div>
-
-        <!-- Languages Column -->
-        <div>
-          <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 2rem;"><i class="fas fa-globe-americas"
-              style="color: var(--accent-color); margin-right: 15px;"></i>Idiomas</h2>
-          <div id="languages-list" class="fade-in" style="display: flex; flex-direction: column; gap: 20px;">
-            <!-- Populated by JS -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="spacer"></div>
+    <!-- Only Recent/Featured Projects teaser could go here, or just straight to sections. 
+         For now, keeping it clean as requested, maybe just a 'Featured' section if we want, 
+         but based on request "about not on main page", main page is mostly Hero + Nav to other parts. 
+         Let's keep a small featured projects section or just contact. 
+         Actually, let's keep the dedicated "Portfolio" section but rename/simplify it. 
+    -->
 
     <section id="portfolio" class="container">
       <h2 class="fade-in">04. Visualizaciones & Proyectos</h2>
