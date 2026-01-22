@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos | Hugo Saldaña</title>
+    <meta property="og:title" content="Proyectos | Hugo Saldaña - CFO & Data Scientist">
+    <meta property="og:description" content="Colección de proyectos de transformación financiera y análisis de datos.">
+    <meta property="og:image" content="https://hugosaldana.com/assets/meta-icon.png">
+    <meta property="og:url" content="https://hugosaldana.com/projects.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="./assets/meta-icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <a href="/index.html" class="logo-link">
+            <img src="./assets/logo-full.png" alt="Hugo Saldaña Logo" class="nav-logo">
+        </a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/projects.html" class="active">Proyectos</a></li>
+            <li><a href="/index.html#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="container" style="padding-top: 150px;">
+            <h1 class="fade-in" style="font-size: 3rem; margin-bottom: 1rem;">Mis Proyectos</h1>
+            <p class="fade-in"
+                style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px;">
+                Una colección detallada de visualizaciones de datos, automatizaciones financieras y análisis
+                estratégicos.
+            </p>
+
+            <div class="projects-grid" id="all-projects-list">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <div class="spacer"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content"
+            style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 40px 20px;">
+            <img src="./assets/logo-full.png" alt="Hugo Saldaña Logo" class="footer-logo"
+                style="width: 120px; opacity: 0.8;">
+            <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+                &copy; 2026 Hugo Saldaña. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        // Logic relevant only to projects listing
+        window.isProjectsPage = true;
+    </script>
+</body>
+
+</html>

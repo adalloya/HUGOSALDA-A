@@ -31,7 +31,69 @@ function initBurgerMenu() {
     }
 }
 
+// Main Router Logic
 function renderContent() {
+    // 1. PROJECT DETAIL PAGE
+    if (window.isDetailPage) {
+        renderProjectDetail();
+        return;
+    }
+
+    // 2. PROJECTS LISTING PAGE
+    if (window.isProjectsPage) {
+        renderProjectsPage();
+        return;
+    }
+
+    // 3. HOME PAGE (Original Logic)
+    renderHomePage();
+}
+
+function renderProjectDetail() {
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('id');
+    const project = profileData.projects.find(p => p.id === projectId);
+
+    if (!project) {
+        document.getElementById('p-title').innerText = "Proyecto no encontrado";
+        return;
+    }
+
+    document.getElementById('p-category').innerText = project.category;
+    document.getElementById('p-title').innerText = project.title;
+    document.getElementById('p-description').innerText = project.description;
+    document.title = `${project.title} | Hugo Saldaña`;
+
+    // Render Asset (Iframe or Image)
+    const container = document.getElementById('p-content');
+    if (project.assetType === 'html') {
+        container.innerHTML = `<iframe src="${project.assetUrl}" title="${project.title}"></iframe>`;
+    } else {
+        container.innerHTML = `<img src="${project.assetUrl}" alt="${project.title}">`;
+    }
+
+    // Render Methodology if exists
+    if (project.methodology) {
+        const metPanel = document.getElementById('p-methodology');
+        const metText = document.getElementById('p-methodology-text');
+
+        // Convert markdown-style **bold** to HTML
+        const formattedText = project.methodology.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+        metText.innerHTML = formattedText;
+        metPanel.style.display = 'block';
+    }
+}
+
+function renderProjectsPage() {
+    const container = document.getElementById('all-projects-list');
+    profileData.projects.forEach(project => {
+        const card = createProjectCard(project);
+        container.appendChild(card);
+    });
+}
+
+function renderHomePage() {
     // Render About & Value Prop
     const aboutText = document.getElementById('about-text');
     if (aboutText) aboutText.innerText = profileData.about;
@@ -50,12 +112,12 @@ function renderContent() {
         });
     }
 
-    // Render Tech Lab (Case Studies)
+    // Render Tech Lab
     const techLabContainer = document.getElementById('tech-lab-list');
     if (techLabContainer && profileData.techLab) {
         profileData.techLab.forEach(caseStudy => {
             const card = document.createElement('div');
-            card.className = 'job-card fade-in'; // Reuse job-card styling for consistency but in grid
+            card.className = 'job-card fade-in';
             card.style.height = '100%';
             card.style.borderLeft = '4px solid var(--accent-color)';
 
@@ -82,14 +144,13 @@ function renderContent() {
         });
     }
 
-    // Render Experience (Trayectoria)
+    // Render Experience
     const expContainer = document.getElementById('experience-list');
     if (expContainer) {
         profileData.experience.forEach(job => {
             const card = document.createElement('div');
             card.className = 'job-card fade-in';
 
-            // Parse markdown-like bold syntax **text** -> <strong>text</strong>
             const parsedDesc = job.description
                 .replace(/\*\*(.*?)\*\*/g, '<strong style="color: var(--text-primary);">$1</strong>')
                 .replace(/\n\n/g, '<br><br>');
@@ -107,26 +168,11 @@ function renderContent() {
         });
     }
 
-    // Render Projects (Portfolio)
+    // Render Projects (Home limits to 3 or featured, for now we render all but using new card style)
     const projContainer = document.getElementById('projects-list');
     if (projContainer) {
         profileData.projects.forEach(project => {
-            const card = document.createElement('div');
-            card.className = 'project-card fade-in';
-
-            const projectLink = project.link || project.image;
-
-            // Updated to use onclick for Modal
-            card.innerHTML = `
-        <div class="project-card-inner" onclick="openModal('${projectLink}', '${project.title}')" style="cursor: pointer;">
-          <img src="${project.image}" alt="${project.title}" class="project-image">
-          <div class="project-info">
-            <div class="project-category">${project.category}</div>
-            <h3 class="project-title">${project.title}</h3>
-            <p style="color: var(--text-secondary); font-size: 0.9rem;">${project.description}</p>
-          </div>
-        </div>
-      `;
+            const card = createProjectCard(project);
             projContainer.appendChild(card);
         });
     }
@@ -156,9 +202,7 @@ function renderContent() {
     const langContainer = document.getElementById('languages-list');
     if (langContainer && profileData.languages) {
         profileData.languages.forEach(lang => {
-            // Parse string "Language: Level"
             const [name, level] = lang.split(':');
-
             const div = document.createElement('div');
             div.className = 'glass-panel fade-in';
             div.style.padding = '1rem 1.5rem';
@@ -179,14 +223,32 @@ function renderContent() {
 
     // Render Contact
     const emailEl = document.getElementById('contact-email');
-    const phoneEl = document.getElementById('contact-phone');
-    const locEl = document.getElementById('contact-location');
-
     if (emailEl && profileData.contact) emailEl.innerText = profileData.contact.email;
-    if (phoneEl && profileData.contact) phoneEl.innerText = profileData.contact.phone;
-    if (locEl && profileData.contact) locEl.innerText = profileData.location;
 
     initModal();
+}
+
+function createProjectCard(project) {
+    const card = document.createElement('div');
+    card.className = 'project-card fade-in';
+
+    // Direct link to project detail page
+    card.innerHTML = `
+    <a href="${project.link}" style="text-decoration: none; color: inherit; display: block;">
+      <div class="project-card-inner">
+        <img src="${project.image}" alt="${project.title}" class="project-image">
+        <div class="project-info">
+          <div class="project-category">${project.category}</div>
+          <h3 class="project-title">${project.title}</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">${project.description}</p>
+          <div style="margin-top: 15px; color: var(--accent-color); font-size: 0.9rem; font-weight: bold;">
+             Ver Proyecto <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i>
+          </div>
+        </div>
+      </div>
+    </a>
+  `;
+    return card;
 }
 
 function initAnimations() {

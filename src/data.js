@@ -95,18 +95,71 @@ Combino la visión estratégica de un CFO con la capacidad de ejecución técnic
     ],
     projects: [
         {
+            id: "mexico-clusters",
+            title: "Mexican Market Clusters & Quality of Life",
+            category: "Data Analysis / Geospatial / Economics",
+            image: "/projects/mexico_clusters_thumb.png", // Assuming we will create a thumb or use a placeholder
+            link: "/project.html?id=mexico-clusters",
+            description: "Advanced K-means clustering analysis of Mexican municipalities based on quality of life indicators (Economy, Tech, Security, Environment, Culture).",
+            methodology: `
+**1. Definición de Variables (Las "Dimensiones")**
+
+*   **A. Economía (Poder Adquisitivo):** Dato: Ingreso corriente promedio trimestral por hogar Fuente: INEGI.
+*   **B. Ciencia y Tecnología (Conectividad):** Dato: Porcentaje de viviendas con acceso a Internet. Fuente: Censo de Población y Vivienda 2020 (INEGI).
+*   **C. Seguridad (Paz Social):** Dato: Tasa de homicidios por cada 100k habitantes. Fuente: SESNSP.
+*   **D. Medio ambiente:** Densidad de emisiones (Toneladas PM2.5/ Superficie) y Probabilidad de sequia. Fuente: SEMARNAT y CONAGUA.
+*   **E. Cultura y Deporte (El "Factor Felicidad"):** Dato: Número de museos, centros culturales y parques/unidades deportivas administradas por el municipio per cápita. Fuente: SIC.
+
+**2. Cálculo del Índice de Calidad de vida**
+
+*   **Cálculo de variables nuevas:**
+    *   Score Economía: Ingreso trimestral
+    *   Score Tecnología: % viviendas con internet
+    *   Score Cultura: Museos + universidades per cápita
+    *   Score Seguridad: log(Homicidios por cada 100,000 habitantes)
+    *   Score Medio ambiente: 40% * log(Emisiones PM2.5 por km2) + 60% * Probabilidad de sequia
+*   **Normalización:** Se normalizaron variables positivas y negativas para hacerlas comparables.
+
+**3. Análisis de Clústers**
+
+Usando la metodología K-means con 8 predefinidos y random state para replicabilidad, se identificaron 8 perfiles de municipios:
+0.  "Rural y Seguro (Desarrollo bajo)"
+1.  "Buen acceso a la tecnología y balanceado (Buena calificación ecológica)"
+2.  "Pacífico y verde (Seguridad alta)"
+3.  "Buena cultura y ecología (Top calificación ecológica)"
+4.  "Promedio"
+5.  "Básico y vulnerable (Baja calidad de vida)"
+6.  "En desarrollo con retos ambientales"
+7.  "Desarrollado económicamente (Alta calidad de vida)"
+
+**4. Creación de Mapa Interactivo**
+Se calculan los centroides para cada municipio y se crea un mapa interactivo mostrando el score y clúster de cada región.
+
+**5. Análisis de sensibilidad**
+Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score, asignando pesos aleatorios en cada iteración.
+`,
+            assetType: "html",
+            assetUrl: "/projects/mexico_clusters_map.html"
+        },
+        {
+            id: "mst-analysis",
             title: "Mexican Market Minimum Spanning Tree (MST)",
             category: "Data Analysis / Financial Markets",
             image: "/projects/mst_chart.png",
-            link: "/projects/mst_chart.png",
-            description: "Analysis based on Distance Correlation of Mexican Market sectors (Telecom, Transport, Food/Beverage, Financials, etc.). visualizing market interconnectedness and clustering."
+            link: "/project.html?id=mst-analysis",
+            description: "Analysis based on Distance Correlation of Mexican Market sectors (Telecom, Transport, Food/Beverage, Financials, etc.). visualizing market interconnectedness and clustering.",
+            assetType: "image",
+            assetUrl: "/projects/mst_chart.png"
         },
         {
+            id: "precipitation-map",
             title: "Precipitation Map Analysis",
             category: "Data Visualization / Geospatial",
             image: "/projects/precipitation_map_thumb.png",
-            link: "/projects/precipitation_map.html",
-            description: "Interactive geospatial analysis of precipitation patterns. Visualizing weather data across different regions."
+            link: "/project.html?id=precipitation-map",
+            description: "Interactive geospatial analysis of precipitation patterns. Visualizing weather data across different regions.",
+            assetType: "html",
+            assetUrl: "/projects/precipitation_map.html"
         }
     ]
 };
