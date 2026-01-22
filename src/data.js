@@ -137,6 +137,14 @@ Se calculan los centroides para cada municipio y se crea un mapa interactivo mos
 
 **5. Análisis de sensibilidad**
 Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score, asignando pesos aleatorios en cada iteración.
+
+<div style="margin-top: 30px;">
+  <h4 style="color: var(--text-primary); margin-bottom: 15px;">Análisis de Robustez: Top 20</h4>
+  <img src="/projects/mexico_clusters_robustness_top.png" alt="Análisis de Robustez Top 20" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+  
+  <h4 style="color: var(--text-primary); margin-bottom: 15px;">Análisis de Robustez: Bottom 20</h4>
+  <img src="/projects/mexico_clusters_robustness_bottom.png" alt="Análisis de Robustez Bottom 20" style="width: 100%; border-radius: 8px;">
+</div>
 `,
             assetType: "html",
             assetUrl: "/projects/mexico_clusters_map.html"
