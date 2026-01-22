@@ -129,6 +129,9 @@ A través de la correlación y distancias euclidianas, detectamos los activos "H
     *   GCARSOA1.MX: 0.14
 
 **4. Optimización de portafolio (Maximizar rendimiento - Sharpe Ratio)**
+*   **Cálculo de matriz de covarianza:**
+<img src="/projects/markowitz/covariance_matrix.png" alt="Matriz de Covarianza" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
 Buscamos maximizar la relación de Sharpe *(Retorno - Tasa Libre de Riesgo / Volatilidad)*.
 
 *   **Resultados:**
