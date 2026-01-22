@@ -533,8 +533,8 @@ nav {
     /* Reset padding for full coverage, inner container handles it */
     min-height: 100vh;
     /* Ensure full height */
-    margin-bottom: 140px;
-    /* EQUAL GAP: Matches section padding (140px) + section top margin/padding (0/140) context */
+    margin-bottom: 40px;
+    /* Reduced to avoid empty space before next section */
 }
 
 .video-container {
@@ -588,6 +588,7 @@ nav {
         height: 100px;
     }
 }
+
 /* Explicit Spacer to Force Gaps */
 .spacer {
     height: 150px !important;
@@ -620,7 +621,8 @@ nav {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2); /* Soft glow */
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    /* Soft glow */
     margin-bottom: 25px;
     display: block;
     margin-left: auto;
