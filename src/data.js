@@ -167,7 +167,7 @@ El objetivo es encontrar la volatilidad más baja posible ($ \\sigma = \\sqrt{w 
             id: "mexico-clusters",
             title: "Mexican Market Clusters & Quality of Life",
             category: "Data Analysis / Geospatial / Economics",
-            image: "/projects/mexico_clusters_thumb.png", // Assuming we will create a thumb or use a placeholder
+            image: "/projects/mexico_clusters_article.png",
             link: "/project.html?id=mexico-clusters",
             description: "Advanced K-means clustering analysis of Mexican municipalities based on quality of life indicators (Economy, Tech, Security, Environment, Culture).",
             methodology: `
