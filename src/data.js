@@ -190,16 +190,15 @@ El objetivo es encontrar la volatilidad más baja posible ($ \\sigma = \\sqrt{w 
 *   **Normalización:** Se normalizaron variables positivas y negativas para hacerlas comparables.
 
 **3. Análisis de Clústers**
+*   Usando la metodología K means con 4 clústers definidos por el método de Silhouette:
 
-Usando la metodología K-means con 8 predefinidos y random state para replicabilidad, se identificaron 8 perfiles de municipios:
-0.  "Rural y Seguro (Desarrollo bajo)"
-1.  "Buen acceso a la tecnología y balanceado (Buena calificación ecológica)"
-2.  "Pacífico y verde (Seguridad alta)"
-3.  "Buena cultura y ecología (Top calificación ecológica)"
-4.  "Promedio"
-5.  "Básico y vulnerable (Baja calidad de vida)"
-6.  "En desarrollo con retos ambientales"
-7.  "Desarrollado económicamente (Alta calidad de vida)"
+<img src="/projects/mexico_clusters_silhouette.png" alt="Silhouette Score" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
+*   Posteriormente se clasifican los 4 clústers de acuerdo a sus caracteristicas:
+    *   0: "Rural y Seguro"
+    *   1: "Balanceado y en desarrollo"
+    *   2: "Desarrollados"
+    *   3: "Buena seguridad y ecología"
 
 **4. Creación de Mapa Interactivo**
 Se calculan los centroides para cada municipio y se crea un mapa interactivo mostrando el score y clúster de cada región.
