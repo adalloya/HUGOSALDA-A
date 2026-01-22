@@ -97,7 +97,7 @@ export const profileData = {
         {
             id: "markowitz-optimization",
             title: "Optimización de Portafolio: Markowitz & MST",
-            category: "Financial Modeling / Machine Learning",
+            category: "Modelación Financiera / Machine Learning",
             image: "/projects/markowitz/normalized_performance.png",
             link: "/project.html?id=markowitz-optimization",
             description: "Análisis profundo del mercado mexicano aplicando Teoría Moderna de Portafolios (Markowitz) y algoritmos de grafos (MST) para identificar eficiencia vs. robustez.",
@@ -165,11 +165,11 @@ El objetivo es encontrar la volatilidad más baja posible ($ \\sigma = \\sqrt{w 
         },
         {
             id: "mexico-clusters",
-            title: "Mexican Market Clusters & Quality of Life",
-            category: "Data Analysis / Geospatial / Economics",
+            title: "Clusters de Mercado Mexicano y Calidad de Vida",
+            category: "Análisis de Datos / Geoespacial / Economía",
             image: "/projects/mexico_clusters_article.png",
             link: "/project.html?id=mexico-clusters",
-            description: "Advanced K-means clustering analysis of Mexican municipalities based on quality of life indicators (Economy, Tech, Security, Environment, Culture).",
+            description: "Análisis avanzado de clustering (K-means) de municipios mexicanos basado en indicadores de calidad de vida (Economía, Tecnología, Seguridad, Medio ambiente, Cultura).",
             methodology: `
 **1. Definición de Variables (Las "Dimensiones")**
 
