@@ -217,26 +217,6 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
 `,
             assetType: "html",
             assetUrl: "/projects/mexico_clusters_map.html"
-        },
-        {
-            id: "mst-analysis",
-            title: "Mexican Market Minimum Spanning Tree (MST)",
-            category: "Data Analysis / Financial Markets",
-            image: "/projects/mst_chart.png",
-            link: "/project.html?id=mst-analysis",
-            description: "Analysis based on Distance Correlation of Mexican Market sectors (Telecom, Transport, Food/Beverage, Financials, etc.). visualizing market interconnectedness and clustering.",
-            assetType: "image",
-            assetUrl: "/projects/mst_chart.png"
-        },
-        {
-            id: "precipitation-map",
-            title: "Precipitation Map Analysis",
-            category: "Data Visualization / Geospatial",
-            image: "/projects/precipitation_map_thumb.png",
-            link: "/project.html?id=precipitation-map",
-            description: "Interactive geospatial analysis of precipitation patterns. Visualizing weather data across different regions.",
-            assetType: "html",
-            assetUrl: "/projects/precipitation_map.html"
         }
     ]
 };
