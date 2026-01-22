@@ -1,17 +1,17 @@
 export const profileData = {
     name: "Hugo Saldaña Gutiérrez",
-    headline: "Director de Finanzas (CFO) | Estrategia Corporativa & Data Science",
+    headline: "Estrategia Financiera & Data Science | Portfolio & Blog",
     location: "Guadalajara, MX",
     contact: {
         email: "hugo.sagu@gmail.com",
         phone: "33 34 73 43 14",
         linkedin: "https://www.linkedin.com/in/hugo-saldana-gutierrez/",
     },
-    about: `Director Financiero con más de 13 años de trayectoria liderando estrategias de rentabilidad en sectores de alta complejidad (Oil & Gas, Retail, Agroindustria y Logística).
-
-Mi diferenciador: Soy un CFO que escribe código. Integro Ciencia de Datos (Python/SQL) con la gestión financiera tradicional para optimizar márgenes, flujo de caja y CAPEX. MBA por IPADE con historial comprobado en reestructuración de modelos de negocio y transformación digital.`,
-    valueProp: `🎯 Propuesta de Valor
-Combino la visión estratégica de un CFO con la capacidad de ejecución técnica de un Data Scientist. No solo pido el reporte, puedo programar la automatización que lo genera.`,
+    about: `Este espacio funciona como un laboratorio personal donde exploro la intersección entre Finanzas Corporativas y Ciencia de Datos.
+    
+    Aquí documento metodologías, casos de estudio y experimentos de visualización que demuestran cómo herramientas como Python y SQL pueden modernizar el análisis financiero tradicional.`,
+    valueProp: `🎯 Enfoque del Sitio
+    Demostrar a través de proyectos reales la aplicación de modelos cuantitativos y automatización en la toma de decisiones estratégicas.`,
     experience: [
         {
             company: "OLEOMEX",
