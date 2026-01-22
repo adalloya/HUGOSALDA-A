@@ -95,6 +95,72 @@ export const profileData = {
     ],
     projects: [
         {
+            id: "markowitz-optimization",
+            title: "Optimización de Portafolio: Markowitz & MST",
+            category: "Financial Modeling / Machine Learning",
+            image: "/projects/markowitz/normalized_performance.png",
+            link: "/project.html?id=markowitz-optimization",
+            description: "Análisis profundo del mercado mexicano aplicando Teoría Moderna de Portafolios (Markowitz) y algoritmos de grafos (MST) para identificar eficiencia vs. robustez.",
+            methodology: `
+**1. Obtención de datos**
+*   Conexión a Yahoo Finance y descarga de información histórica de 3 años de las acciones de la BMV.
+*   Cálculo del logaritmo de los retornos.
+
+<img src="/projects/markowitz/returns_table.png" alt="Tabla de Retornos Logarítmicos" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
+**2. Rendimientos históricos**
+Para fines de referencia se cálculan los rendimientos históricos por empresa y por sector. Se observa la evolución normalizada de los precios (base 100) y el desempeño anualizado.
+
+<img src="/projects/markowitz/normalized_performance.png" alt="Rendimiento Normalizado" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+<img src="/projects/markowitz/sector_returns.png" alt="Retornos por Sector" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
+**3. Análisis de Centralidad (MST)**
+A través de la correlación y distancias euclidianas, detectamos los activos "Hub" (o centrales) que tienden a influir en el movimiento general del mercado.
+
+*   **Cálculo de matriz de correlación:**
+<img src="/projects/markowitz/correlation_matrix.png" alt="Matriz de Correlación" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
+*   **Cálculo de matriz de distancias:**
+<img src="/projects/markowitz/distance_matrix.png" alt="Matriz de Distancias" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
+*   **Top 10 Hubs más influyentes (Grados de centralidad en MST):**
+    *   GFNORTEO.MX: 0.21
+    *   RA.MX: 0.21
+    *   GCARSOA1.MX: 0.14
+
+**4. Optimización de portafolio (Maximizar rendimiento - Sharpe Ratio)**
+Buscamos maximizar la relación de Sharpe *(Retorno - Tasa Libre de Riesgo / Volatilidad)*.
+
+*   **Resultados:**
+    *   Sharpe Ratio: **1.3735**
+    *   Retorno anual esperado: **40.61%**
+    *   Volatilidad anual: **21.56%**
+
+*   **Top Asignación:**
+    *   FRES.MX: 38.7%
+    *   GMEXICOB.MX: 18.0%
+    *   CEMEXCPO.MX: 12.7%
+
+**5. Optimización de portafolio (Minimizar riesgo)**
+El objetivo es encontrar la volatilidad más baja posible ($ \\sigma = \\sqrt{w \\cdot \\Sigma \\cdot w^T} $).
+
+*   **Resultados:**
+    *   Retorno anual esperado: **6.95%**
+    *   Volatilidad anual: **10.85%**
+
+*   **Top Asignación (Estrategia Defensiva):**
+    *   GMXT.MX: 13.0%
+    *   KOFUBL.MX: 10.8%
+    *   LIVEPOLC: 10.6%
+
+**6. Comparación de Modelos**
+*   **Eficiencia (Sharpe):** Ideal para crecimiento agresivo (40% retorno), pero concentrado en pocos activos (99% en top 6).
+*   **Seguridad (Min Vol):** Ideal para preservación de capital, reduciendo el riesgo a la mitad (10.85%) mediante una diversificación profunda.
+`,
+            assetType: "image",
+            assetUrl: "/projects/markowitz/normalized_performance.png"
+        },
+        {
             id: "mexico-clusters",
             title: "Mexican Market Clusters & Quality of Life",
             category: "Data Analysis / Geospatial / Economics",
