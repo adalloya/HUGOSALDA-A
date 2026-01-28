@@ -128,6 +128,8 @@ A través de la correlación y distancias euclidianas, detectamos los activos "H
     *   RA.MX: 0.21
     *   GCARSOA1.MX: 0.14
 
+<img src="/projects/markowitz/mst_graph.png" alt="Minimum Spanning Tree Graph" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+
 **4. Optimización de portafolio (Maximizar rendimiento - Sharpe Ratio)**
 *   **Cálculo de matriz de covarianza:**
 <img src="/projects/markowitz/covariance_matrix.png" alt="Matriz de Covarianza" style="width: 100%; border-radius: 8px; margin: 20px 0;">
