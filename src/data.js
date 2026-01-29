@@ -250,6 +250,10 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
     *   **Closeness Centrality:** Evaluación de accesibilidad; qué tan rápido se puede llegar a una estación desde cualquier otro punto.
     *   **PageRank Centrality:** Medición de la influencia "viral" de una estación basada en la importancia de sus vecinos (inspirado en el algoritmo de Google).
 
+<div style="margin: 20px 0;">
+  <img src="/projects/smart_mobility/mapa_centralidad_ponderada.png" alt="Mapa Centralidad Ponderada" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+</div>
+
 **4. Visualización y Resultados**
 <div style="margin: 20px 0;">
   <img src="/projects/smart_mobility/centrality_histograms.png" alt="Histogramas de Centralidad" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
