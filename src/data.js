@@ -256,6 +256,10 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
 </div>
 *   **Consolidación:** Ranking de estaciones críticas para la planificación operativa.
 *   **Mapeo Geoespacial:** Visualización interactiva de los 50 nodos más importantes, resaltando la estructura esqueletal del sistema de transporte.
+
+<div style="margin: 20px 0;">
+  <img src="/projects/smart_mobility/network_map_50_nodes.png" alt="Mapa de Red 50 Nodos" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+</div>
 `,
             assetType: "image",
             assetUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1000"
