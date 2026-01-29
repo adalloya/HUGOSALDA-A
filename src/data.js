@@ -223,7 +223,7 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
             id: "smart-mobility-network",
             title: "Análisis de Sistemas Complejos y Redes",
             category: "Network Science / Movilidad Urbana",
-            image: "/projects/smart_mobility/project_thumbnail.png",
+            image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1000",
             link: "/project.html?id=smart-mobility-network",
             description: "Evaluación integral de sistemas de transporte masivo utilizando Teoría de Grafos y Redes Neuronales para identificar nodos críticos y optimizar la conectividad urbana.",
             methodology: `
