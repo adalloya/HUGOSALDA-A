@@ -298,8 +298,8 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
   <img src="/projects/smart_mobility/mapa_centralidad_ponderada.png" alt="Mapa Centralidad Ponderada" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
 </div>
 `,
-            assetType: "none",
-            assetUrl: "/projects/smart_mobility/project_thumbnail.png"
+            assetType: "html",
+            assetUrl: "/projects/smart_mobility/smart_mobility_map.html"
         }
     ]
 };
