@@ -72,10 +72,15 @@ function renderProjectDetail() {
 
     // Render Asset (Iframe or Image)
     const container = document.getElementById('p-content');
-    if (project.assetType === 'html') {
+    if (project.assetType === 'none') {
+        container.innerHTML = '';
+        container.style.display = 'none';
+    } else if (project.assetType === 'html') {
         container.innerHTML = `<iframe src="${project.assetUrl}" title="${project.title}"></iframe>`;
+        container.style.display = 'block';
     } else {
         container.innerHTML = `<img src="${project.assetUrl}" alt="${project.title}">`;
+        container.style.display = 'block';
     }
 
     // Render Methodology if exists

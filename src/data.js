@@ -235,10 +235,12 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
 *   **Cálculo de Métricas de Viaje:** Estimación precisa de tiempos de traslado y distancias recorridas entre pares de estaciones.
 *   **Validación Estadística:** Análisis de distribuciones de variables numéricas para detectar outliers (viajes atípicos) y asegurar la calidad de los datos.
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
   <img src="/projects/smart_mobility/hist_edad.png" alt="Histograma Edad" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
   <img src="/projects/smart_mobility/hist_distancia.png" alt="Histograma Distancia" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
   <img src="/projects/smart_mobility/hist_genero.png" alt="Histograma Genero" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+</div>
+<div style="margin: 20px 0;">
   <img src="/projects/smart_mobility/heatmap_viajes.png" alt="Heatmap Viajes" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
 </div>
 
@@ -296,8 +298,8 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
   <img src="/projects/smart_mobility/mapa_centralidad_ponderada.png" alt="Mapa Centralidad Ponderada" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
 </div>
 `,
-            assetType: "image",
-            assetUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1000"
+            assetType: "none",
+            assetUrl: "/projects/smart_mobility/project_thumbnail.png"
         }
     ]
 };
