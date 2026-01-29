@@ -223,7 +223,7 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
             id: "smart-mobility-network",
             title: "Análisis de Sistemas Complejos y Redes",
             category: "Network Science / Movilidad Urbana",
-            image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1000",
+            image: "/projects/smart_mobility/project_thumbnail.png",
             link: "/project.html?id=smart-mobility-network",
             description: "Evaluación integral de sistemas de transporte masivo utilizando Teoría de Grafos y Redes Neuronales para identificar nodos críticos y optimizar la conectividad urbana.",
             methodology: `
@@ -250,11 +250,8 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
     *   **Closeness Centrality:** Evaluación de accesibilidad; qué tan rápido se puede llegar a una estación desde cualquier otro punto.
     *   **PageRank Centrality:** Medición de la influencia "viral" de una estación basada en la importancia de sus vecinos (inspirado en el algoritmo de Google).
 
-<div style="margin: 20px 0;">
-  <img src="/projects/smart_mobility/mapa_centralidad_ponderada.png" alt="Mapa Centralidad Ponderada" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
-</div>
-
 **4. Visualización y Resultados**
+
 <div style="margin: 20px 0;">
   <img src="/projects/smart_mobility/centrality_histograms.png" alt="Histogramas de Centralidad" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
 </div>
@@ -263,6 +260,40 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
 
 <div style="margin: 20px 0;">
   <img src="/projects/smart_mobility/network_map_50_nodes.png" alt="Mapa de Red 50 Nodos" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+</div>
+
+*   **Listado de las 3 estaciones más importantes por grado de centralidad:**
+
+    *   **Weighted_Degree:**
+        *   Station: (GDL-049) Lopez Cotilla/ Marcos Castellanos (51) - Weighted_Degree: 1142.0000
+        *   Station: (GDL-056) Av. 16 de Sept. / C. Miguel Blanco (58) - Weighted_Degree: 1079.0000
+        *   Station: (GDL-073) Av. La Paz / Av. Federalismo (75) - Weighted_Degree: 1059.0000
+
+    *   **Betweenness_Centrality:**
+        *   Station: (GDL-049) Lopez Cotilla/ Marcos Castellanos (51) - Betweenness_Centrality: 0.0065
+        *   Station: (GDL-052) Av. Juárez / Av. 16 de Septiembre (54) - Betweenness_Centrality: 0.0062
+        *   Station: (GDL-050) C. Pedro Moreno / Calz. Federalismo (52) - Betweenness_Centrality: 0.0059
+
+    *   **Closeness_Centrality:**
+        *   Station: (GDL-052) Av. Juárez / Av. 16 de Septiembre (54) - Closeness_Centrality: 0.8061
+        *   Station: (GDL-032) C. Degollado / Av. Hidalgo (34) - Closeness_Centrality: 0.7957
+        *   Station: (GDL-024) Av. Federalismo / C. Juan Manuel (26) - Closeness_Centrality: 0.7872
+
+    *   **PageRank_Centrality:**
+        *   Station: (GDL-056) Av. 16 de Sept. / C. Miguel Blanco (58) - PageRank_Centrality: 0.0053
+        *   Station: (GDL-049) Lopez Cotilla/ Marcos Castellanos (51) - PageRank_Centrality: 0.0052
+        *   Station: (GDL-198) Av. Alcalde / C. Hospital (271) - PageRank_Centrality: 0.0050
+
+**5. Hallazgos clave**
+*   El análisis reveló patrones claros en el uso del sistema de bicicletas a lo largo del año y del día, con picos de actividad en ciertas horas y meses, lo cual es crucial para la planificación operativa.
+*   Las medidas de centralidad permitieron identificar distintas funciones para las estaciones:
+    *   Estaciones con Alto Volumen.
+    *   Estaciones puente.
+    *   Estaciones con alta accesibilidad.
+    *   Estaciones con Alto volumen y conectadas a otras estaciones importantes.
+
+<div style="margin: 20px 0;">
+  <img src="/projects/smart_mobility/mapa_centralidad_ponderada.png" alt="Mapa Centralidad Ponderada" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
 </div>
 `,
             assetType: "image",
