@@ -235,6 +235,13 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
 *   **Cálculo de Métricas de Viaje:** Estimación precisa de tiempos de traslado y distancias recorridas entre pares de estaciones.
 *   **Validación Estadística:** Análisis de distribuciones de variables numéricas para detectar outliers (viajes atípicos) y asegurar la calidad de los datos.
 
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+  <img src="/projects/smart_mobility/hist_edad.png" alt="Histograma Edad" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+  <img src="/projects/smart_mobility/hist_distancia.png" alt="Histograma Distancia" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+  <img src="/projects/smart_mobility/hist_genero.png" alt="Histograma Genero" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+  <img src="/projects/smart_mobility/heatmap_viajes.png" alt="Heatmap Viajes" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+</div>
+
 **3. Modelado de Red (Graph Theory)**
 *   **Construcción del Grafo:** Definición de nodos (estaciones) y aristas (rutas), creando una red dirigida ponderada por flujo de pasajeros.
 *   **Análisis de Centralidad (Network Measures):**
@@ -244,6 +251,9 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
     *   **PageRank Centrality:** Medición de la influencia "viral" de una estación basada en la importancia de sus vecinos (inspirado en el algoritmo de Google).
 
 **4. Visualización y Resultados**
+<div style="margin: 20px 0;">
+  <img src="/projects/smart_mobility/centrality_histograms.png" alt="Histogramas de Centralidad" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+</div>
 *   **Consolidación:** Ranking de estaciones críticas para la planificación operativa.
 *   **Mapeo Geoespacial:** Visualización interactiva de los 50 nodos más importantes, resaltando la estructura esqueletal del sistema de transporte.
 `,
