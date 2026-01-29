@@ -218,6 +218,37 @@ Simulación Montecarlo con 1,000 iteraciones para validar la robustez del score,
 `,
             assetType: "html",
             assetUrl: "/projects/mexico_clusters_map.html"
+        },
+        {
+            id: "smart-mobility-network",
+            title: "Análisis de Sistemas Complejos y Redes",
+            category: "Network Science / Movilidad Urbana",
+            image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1000",
+            link: "/project.html?id=smart-mobility-network",
+            description: "Evaluación integral de sistemas de transporte masivo utilizando Teoría de Grafos y Redes Neuronales para identificar nodos críticos y optimizar la conectividad urbana.",
+            methodology: `
+**1. Fase 1: Recolección y Limpieza de Datos**
+*   **Concatenación de Bases:** Unificación de registros mensuales en una base maestra anual para analizar estacionalidad y tendencias macro.
+*   **Enriquecimiento:** Fusión (Merge) con catálogos geoespaciales para asignar nombres y coordenadas a cada código de estación.
+
+**2. Preparación de la Información (Ingeniería de Características)**
+*   **Cálculo de Métricas de Viaje:** Estimación precisa de tiempos de traslado y distancias recorridas entre pares de estaciones.
+*   **Validación Estadística:** Análisis de distribuciones de variables numéricas para detectar outliers (viajes atípicos) y asegurar la calidad de los datos.
+
+**3. Modelado de Red (Graph Theory)**
+*   **Construcción del Grafo:** Definición de nodos (estaciones) y aristas (rutas), creando una red dirigida ponderada por flujo de pasajeros.
+*   **Análisis de Centralidad (Network Measures):**
+    *   **Degree Centrality:** Identificación de estaciones con mayor volumen de conexiones directas (Hubs de alta actividad).
+    *   **Betweenness Centrality:** Detección de estaciones "puente" o cuellos de botella críticos para la resiliencia de la red.
+    *   **Closeness Centrality:** Evaluación de accesibilidad; qué tan rápido se puede llegar a una estación desde cualquier otro punto.
+    *   **PageRank Centrality:** Medición de la influencia "viral" de una estación basada en la importancia de sus vecinos (inspirado en el algoritmo de Google).
+
+**4. Visualización y Resultados**
+*   **Consolidación:** Ranking de estaciones críticas para la planificación operativa.
+*   **Mapeo Geoespacial:** Visualización interactiva de los 50 nodos más importantes, resaltando la estructura esqueletal del sistema de transporte.
+`,
+            assetType: "image",
+            assetUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1000"
         }
     ]
 };
