@@ -68,7 +68,7 @@ function renderProjectDetail() {
     document.getElementById('p-category').innerText = project.category;
     document.getElementById('p-title').innerText = project.title;
     document.getElementById('p-description').innerText = project.description;
-    document.title = `${project.title} | Hugo Saldaña`;
+    document.title = `${project.title}`;
 
     // Render Asset (Iframe or Image)
     const container = document.getElementById('p-content');
